@@ -1,0 +1,7 @@
+FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine
+
+WORKDIR /usr/src
+COPY . .
+
+RUN chmod +x start.sh
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
